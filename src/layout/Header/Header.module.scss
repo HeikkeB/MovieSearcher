@@ -1,0 +1,17 @@
+nav {
+  background-color: #7b1fa2;
+  width: 100%;
+  height: 3rem;
+
+  .navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .brand,
+  .repo {
+    text-decoration: none;
+  }
+}

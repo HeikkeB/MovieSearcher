@@ -1,7 +1,12 @@
-import './App.css'
+import React from 'react'
+import { Header } from './layout/Header/Header'
 
 function App() {
-  return <div className="App"></div>
+  return (
+    <div className="App">
+      <Header />
+    </div>
+  )
 }
 
 export default App
