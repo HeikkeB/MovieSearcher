@@ -4,9 +4,7 @@ export function Header() {
   return (
     <nav>
       <div className={styles.navWrapper}>
-        <a href="!#" className={styles.brand}>
-          Movie Searcher
-        </a>
+        <h1 className={styles.brand}>Movie Searcher</h1>
         <a className={styles.repo} href="!#">
           Repo
         </a>

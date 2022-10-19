@@ -1,0 +1,13 @@
+$fonts-color: #cfd8dc;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 45px;
+  background-color: #7b1fa2;
+
+  .date {
+    color: $fonts-color;
+  }
+}
