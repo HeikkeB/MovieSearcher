@@ -12,10 +12,15 @@ body {
 }
 
 .App {
-  width: 1080;
   height: 100vh;
-  background-color: #212121;
+  background-color: #1c1c1c;
+}
+
+.page {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  background-color: #212121;
 }

@@ -1,12 +1,16 @@
 import React from 'react'
 import { Footer } from './layout/Footer/Footer'
 import { Header } from './layout/Header/Header'
+import { Main } from './layout/Main/Main'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Footer />
+      <div className="page">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </div>
   )
 }

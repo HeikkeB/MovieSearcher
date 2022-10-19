@@ -4,10 +4,15 @@ $fonts-color: #cfd8dc;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 45px;
+  padding: 0 30px;
   background-color: #7b1fa2;
 
   .date {
+    color: $fonts-color;
+    font-size: 15px;
+  }
+
+  .githubLink {
     color: $fonts-color;
   }
 }
