@@ -6,11 +6,9 @@ import { Main } from './layout/Main/Main'
 function App() {
   return (
     <div className="App">
-      <div className="page">
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   )
 }
