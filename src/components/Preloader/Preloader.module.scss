@@ -1,0 +1,50 @@
+$bg: #212121;
+$fg: #d297e2;
+$ds: #7b1fa2;
+
+@mixin cc() {
+  transform: translate(0%, 50%);
+}
+
+.loader {
+  @include cc();
+  width: 200px;
+  height: 200px;
+  border: 2em solid $fg;
+  border-radius: 50%;
+  animation: shadowOuter 1.5s 0s ease infinite alternate;
+  &:before {
+    @include cc();
+    width: 76em;
+    height: 76em;
+    border: 1.5em solid transparentize($ds, 0.25);
+    border-radius: 50%;
+    animation: shadowInner 1.5s 0s ease infinite alternate;
+  }
+  &:after {
+    @include cc();
+    width: 73em;
+    height: 73em;
+    border: 1.5em solid transparentize($ds, 0.75);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 7em $ds);
+  }
+}
+
+@keyframes shadowOuter {
+  0% {
+    filter: drop-shadow(0 0 1em $ds);
+  }
+  100% {
+    filter: drop-shadow(0 0 3em $ds);
+  }
+}
+
+@keyframes shadowInner {
+  0% {
+    filter: drop-shadow(0 0 3em $ds);
+  }
+  100% {
+    filter: drop-shadow(0 0 5em $ds);
+  }
+}

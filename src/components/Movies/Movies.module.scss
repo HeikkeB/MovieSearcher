@@ -7,3 +7,17 @@
   justify-items: center;
   justify-content: center;
 }
+
+.containerNF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.nothingFound {
+  color: #cfd8dc;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}

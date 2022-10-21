@@ -3,7 +3,7 @@ import styles from './Search.module.scss'
 
 export class Search extends React.Component {
   state = {
-    search: 'Batman',
+    search: '',
     type: 'all',
   }
 
@@ -46,7 +46,7 @@ export class Search extends React.Component {
               value={this.state.search}
               onChange={this.handleChange}
               onKeyDown={this.handleKey}
-              onBlur={this.handleClear}
+              //onBlur={this.handleClear}
             />
             <button
               className={styles.buttonRemove}
