@@ -3,8 +3,8 @@ import styles from './Header.module.scss'
 export function Header() {
   return (
     <nav>
-      <div className={styles.navWrapper}>
-        <h1 className={styles.brand}>Movie Searcher</h1>
+      <div className={styles.wrapper}>
+        <h1 className={styles.logoBrand}>Movie Searcher</h1>
         <a className={styles.repo} href="!#">
           Repo
         </a>

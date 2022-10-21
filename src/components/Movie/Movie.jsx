@@ -11,13 +11,19 @@ export function Movie(props) {
 
   return (
     <li id={id} className={styles.movie}>
-      <div className="card-image">
-        <img className="poster" src={poster} />
-      </div>
-      <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p>{year}</p>
-        <p>{type}</p>
+      {poster === 'N/A' ? (
+        <img
+          className={styles.poster}
+          src="https://via.placeholder.com/275x426.png/1c1c1c/cfd8dc?text=NO IMAGE"
+        />
+      ) : (
+        <img className={styles.poster} src={poster} />
+      )}
+
+      <h3 className={styles.cardTitle}>{title}</h3>
+      <div className={styles.cardContent}>
+        <p>{year} years</p>
+        <p>type: {type}</p>
       </div>
     </li>
   )

@@ -1,2 +1,31 @@
 .container {
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    align-items: flex-start;
+    width: 90%;
+    height: 100vh;
+  }
+
+  .loading {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    color: #cfd8dc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(
+      95.98deg,
+      #a169f7 21.6%,
+      #00aaff 44.24%,
+      #ff6163 70.71%
+    );
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .loading:hover {
+    scale: 1.1;
+  }
 }
