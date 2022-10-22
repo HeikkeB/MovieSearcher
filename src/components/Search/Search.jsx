@@ -84,6 +84,14 @@ export class Search extends React.Component {
             checked={this.state.type === 'series'}
           />
           <label htmlFor="Series">Series</label>
+          <input
+            type="radio"
+            id="Episode"
+            data-type="episode"
+            onChange={this.handleFilter}
+            checked={this.state.type === 'episode'}
+          />
+          <label htmlFor="Episode">Episode</label>
         </div>
       </div>
     )

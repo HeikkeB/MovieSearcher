@@ -4,6 +4,7 @@ import { Movies } from '../../components/Movies/Movies'
 import { Preloader } from '../../components/Preloader/Preloader'
 import { Search } from '../../components/Search/Search'
 
+const API_KEY = process.env.REACT_APP_API_KEY
 export class Main extends React.Component {
   state = {
     movies: [],
@@ -11,20 +12,28 @@ export class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://www.omdbapi.com/?apikey=9708daa8&s=Batman')
-      .then((res) => res.json())
-      .then((data) => this.setState({ movies: data.Search, loading: false }))
+    try {
+      fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=`)
+        .then((res) => res.json())
+        .then((data) => this.setState({ movies: data.Search, loading: false }))
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   searchMovies = (str, type = 'all') => {
-    this.setState({ loading: true })
-    fetch(
-      `http://www.omdbapi.com/?apikey=9708daa8&s=${str}${
-        type !== 'all' ? `&type=${type}` : ''
-      }`
-    )
-      .then((res) => res.json())
-      .then((data) => this.setState({ movies: data.Search }))
+    try {
+      this.setState({ loading: true })
+      fetch(
+        `http://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
+          type !== 'all' ? `&type=${type}` : ''
+        }`
+      )
+        .then((res) => res.json())
+        .then((data) => this.setState({ movies: data.Search }))
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   render() {

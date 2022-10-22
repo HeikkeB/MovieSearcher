@@ -3,7 +3,25 @@ $fg: #d297e2;
 $ds: #7b1fa2;
 
 @mixin cc() {
-  transform: translate(0%, 50%);
+  transform: translate(0%, 25%);
+}
+
+.containerPreload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlePreload {
+  margin: 30px 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #cfd8dc;
+
+  @media screen and (max-width: 590px) {
+    font-size: 18px;
+  }
 }
 
 .loader {
@@ -28,6 +46,11 @@ $ds: #7b1fa2;
     border: 1.5em solid transparentize($ds, 0.75);
     border-radius: 50%;
     filter: drop-shadow(0 0 7em $ds);
+  }
+
+  @media screen and (max-width: 590px) {
+    width: 160px;
+    height: 160px;
   }
 }
 

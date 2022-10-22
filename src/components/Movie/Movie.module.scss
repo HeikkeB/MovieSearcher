@@ -1,18 +1,37 @@
 .movie {
   list-style: none;
-  background-color: #cfd8dc;
+  background-color: #2a0933;
   border-radius: 10px;
   padding: 0;
   margin: 0;
   box-shadow: 0px 18px 30px rgba(0, 0, 0, 0.1);
 
+  @media screen and (max-width: 650px) {
+    width: 240px;
+  }
+
+  @media screen and (max-width: 590px) {
+    width: 275px;
+  }
+
   .poster {
     border-radius: 10px 10px 0 0;
     width: 275px;
     height: 426px;
+
+    @media screen and (max-width: 650px) {
+      width: 240px;
+      height: 391px;
+    }
+
+    @media screen and (max-width: 590px) {
+      width: 275px;
+      height: 426px;
+    }
   }
 
   .cardTitle {
+    color: #cfd8dc;
     font-size: 16px;
     padding: 0;
     margin: 8px 0 10px 15px;
@@ -20,6 +39,15 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    @media screen and (max-width: 650px) {
+      font-size: 15px;
+      width: 210px;
+    }
+
+    @media screen and (max-width: 590px) {
+      width: 250px;
+    }
   }
 
   .cardContent {
@@ -29,9 +57,14 @@
     padding: 0px 15px;
 
     p {
+      color: #cfd8dc;
       font-size: 14px;
       padding: 0;
       margin: 0 0 10px 0;
+
+      @media screen and (max-width: 650px) {
+        font-size: 12px;
+      }
     }
   }
 }

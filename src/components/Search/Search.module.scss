@@ -7,6 +7,11 @@
   position: relative;
   flex-direction: column;
 
+  @media screen and (max-width: 650px) {
+    align-items: center;
+    padding: 0 30px;
+  }
+
   .containerSearch {
     display: flex;
     width: 100%;
@@ -50,6 +55,7 @@
     height: 12px;
     margin: 0px 15px 0 0;
     padding: 0;
+    cursor: pointer;
   }
 
   .buttonSearch {
@@ -62,6 +68,7 @@
     padding: 0 15px;
     margin: 0;
     flex: 1;
+    cursor: pointer;
   }
 
   .radioInput {
@@ -76,7 +83,21 @@
       padding: 0;
       margin: 0 80px 0 10px;
       cursor: pointer;
+
+      @media screen and (max-width: 590px) {
+        margin: 0 50px 0 5px;
+      }
+
+      @media screen and (max-width: 420px) {
+        margin: 0 25px 0 5px;
+        font-size: 14px;
+      }
     }
+
+    label:last-child {
+      margin-right: 0;
+    }
+
     input[type='radio'] {
       padding: 0;
       margin: 0;

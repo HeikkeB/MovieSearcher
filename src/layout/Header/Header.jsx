@@ -5,7 +5,11 @@ export function Header() {
     <nav>
       <div className={styles.wrapper}>
         <h1 className={styles.logoBrand}>Movie Searcher</h1>
-        <a className={styles.repo} href="!#">
+        <a
+          className={styles.repo}
+          href="https://github.com/HeikkeB/MovieSearcher"
+          target="_blank"
+        >
           Repo
         </a>
       </div>

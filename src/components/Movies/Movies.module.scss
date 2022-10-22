@@ -1,11 +1,21 @@
 .movies {
   margin: 0;
-  padding: 20px 10px;
+  padding: 30px;
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, 275px);
   justify-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 650px) {
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 250px);
+  }
+
+  @media screen and (max-width: 590px) {
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 275px);
+  }
 }
 
 .containerNF {
@@ -16,8 +26,13 @@
 }
 
 .nothingFound {
+  text-transform: uppercase;
   color: #cfd8dc;
   font-size: 30px;
   margin: 0;
   text-align: center;
+
+  @media screen and (max-width: 650px) {
+    font-size: 24px;
+  }
 }
