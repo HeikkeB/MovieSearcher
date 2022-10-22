@@ -15,7 +15,7 @@ export class Main extends React.Component {
     try {
       fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=`)
         .then((res) => res.json())
-        .then((data) => this.setState({ movies: data.Search, loading: false }))
+        .then((data) => this.setState({ movies: data.Search, loading: true }))
     } catch (err) {
       console.log(err)
     }
@@ -31,6 +31,7 @@ export class Main extends React.Component {
       )
         .then((res) => res.json())
         .then((data) => this.setState({ movies: data.Search }))
+      this.setState({ loading: false })
     } catch (err) {
       console.log(err)
     }
@@ -45,12 +46,11 @@ export class Main extends React.Component {
           searchFilter={this.searchFilter}
         />
         {loading ? (
-          <Movies movies={movies} />
-        ) : (
           <div className={styles.loadingContainer}>
             <Preloader />
-            {/* {<h3 className={styles.loading}>Loading...</h3>} */}
           </div>
+        ) : (
+          <Movies movies={movies} />
         )}
       </main>
     )
